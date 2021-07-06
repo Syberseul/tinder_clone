@@ -16,11 +16,14 @@ function Cards() {
 
   return (
     <div className="cards">
-      <div className="cards__container">
-        {people.map((person, id) => {
-          return <p key={id}>{person.name}</p>;
-        })}
-      </div>
+      {people.map((person, id) => {
+        return (
+          <div className="card__container">
+            <p key={id}>{person.name}</p>
+            <img src={person.url} alt="" />
+          </div>
+        );
+      })}
     </div>
   );
 }
